@@ -1,0 +1,54 @@
+[gd_scene format=3 uid="uid://cddulruc3enni"]
+
+[ext_resource type="Script" uid="uid://dh0mh1poc6jqg" path="res://scripts/enemy.gd" id="1_4ra3w"]
+[ext_resource type="Texture2D" uid="uid://n8i7hms8vkwh" path="res://assets/kenney_abstract-platformer/PNG/Enemies/enemyWalking_1.png" id="1_md0e3"]
+[ext_resource type="Texture2D" uid="uid://l07q0jv1xjxo" path="res://assets/kenney_abstract-platformer/PNG/Enemies/enemyWalking_2.png" id="2_4ra3w"]
+[ext_resource type="PackedScene" uid="uid://d4gn8cwwq3ulx" path="res://scenes/killzone.tscn" id="4_5uy6h"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5uy6h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_md0e3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_4ra3w")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c4w8v"]
+size = Vector2(34, 42)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xwavj"]
+size = Vector2(40, 48)
+
+[node name="Enemy" type="CharacterBody2D" unique_id=349860560]
+script = ExtResource("1_4ra3w")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=787732588]
+sprite_frames = SubResource("SpriteFrames_5uy6h")
+animation = &"walk"
+autoplay = "walk"
+frame_progress = 0.14425711
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=267810171]
+position = Vector2(0, -2)
+shape = SubResource("RectangleShape2D_c4w8v")
+
+[node name="FloorRight" type="RayCast2D" parent="." unique_id=2038153425]
+position = Vector2(0, -2)
+target_position = Vector2(14, 26)
+
+[node name="FloorLeft" type="RayCast2D" parent="." unique_id=1527476561]
+position = Vector2(0, -1)
+target_position = Vector2(-14, 24)
+
+[node name="Killzone" parent="." unique_id=1961584173 instance=ExtResource("4_5uy6h")]
+position = Vector2(-15, -10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Killzone" unique_id=394476290]
+position = Vector2(14, 8)
+shape = SubResource("RectangleShape2D_xwavj")
