@@ -14,6 +14,14 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("2_smehm")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_smehm")
 }, {
 "duration": 1.0,
 "texture": ExtResource("3_ur7pv")
@@ -22,7 +30,7 @@ animations = [{
 "texture": ExtResource("4_y4r1p")
 }],
 "loop": true,
-"name": &"up",
+"name": &"jump",
 "speed": 6.0
 }, {
 "frames": [{
@@ -54,7 +62,7 @@ texture_filter = 1
 position = Vector2(1.0000019, -0.9999981)
 scale = Vector2(1.3514166, 1.1511481)
 sprite_frames = SubResource("SpriteFrames_ur7pv")
-animation = &"walk"
+animation = &"jump"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1137082187]
 position = Vector2(-0.5, -5)

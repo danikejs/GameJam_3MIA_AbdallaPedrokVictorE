@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://ckyu5w3qkkp3h"]
+
+[ext_resource type="Script" uid="uid://5ry8x4kxmri3" path="res://scripts/door.gd" id="1_uvdjg"]
+[ext_resource type="Texture2D" uid="uid://bo53p773jesfn" path="res://assets/kenney_platformer-art-deluxe/Base pack/Tiles/door_closedMid.png" id="2_83dcw"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_la1wf"]
+size = Vector2(70, 70)
+
+[node name="Door" type="Area2D" unique_id=1369426594]
+script = ExtResource("1_uvdjg")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=799521359]
+texture = ExtResource("2_83dcw")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1596930509]
+shape = SubResource("RectangleShape2D_la1wf")

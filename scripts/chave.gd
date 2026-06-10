@@ -11,7 +11,8 @@ func _ready():
 
 func _on_body_entered(body):
 	if body.name == "Player":
-		print("+1")
+		GameManager.keys_collected += 1
+		print("Chaves:", GameManager.keys_collected)
 
 		collected.emit()
 

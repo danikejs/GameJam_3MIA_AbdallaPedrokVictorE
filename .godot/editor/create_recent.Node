@@ -1,7 +1,11 @@
-GPUParticles2D
-CollisionShape2D
 Sprite2D
+CollisionShape2D
 Area2D
+Label
+ColorRect
+CanvasLayer
+Camera2D
+GPUParticles2D
 RayCast2D
 AnimatedSprite2D
 CharacterBody2D

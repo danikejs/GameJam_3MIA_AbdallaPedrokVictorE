@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://bkgablimpg6gp"]
+
+[ext_resource type="Script" uid="uid://wqmu5dll61y7" path="res://scripts/cutscene.gd" id="1_a320b"]
+[ext_resource type="PackedScene" uid="uid://2lf4rso3wfm7" path="res://scenes/player.tscn" id="2_0sipp"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_cq776"]
+font_size = 40
+font_color = Color(1, 0, 0, 1)
+
+[node name="Cutscene" type="Node2D" unique_id=1683530966]
+position = Vector2(606, 345)
+script = ExtResource("1_a320b")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=1039526575]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1798388773]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer" unique_id=769897579]
+offset_left = -33.0
+offset_top = -2.0
+offset_right = 1180.0
+offset_bottom = 668.0
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="MessageLabel" type="Label" parent="CanvasLayer" unique_id=1649054937]
+anchors_preset = -1
+anchor_left = -0.3107639
+anchor_top = -0.52006173
+anchor_right = 0.7065972
+anchor_bottom = 0.47839507
+offset_left = 326.0
+offset_top = 336.0
+offset_right = 366.0
+offset_bottom = 359.0
+label_settings = SubResource("LabelSettings_cq776")
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="Player" parent="CanvasLayer" unique_id=1423315613 instance=ExtResource("2_0sipp")]
+position = Vector2(72, 378)
