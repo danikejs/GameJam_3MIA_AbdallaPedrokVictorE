@@ -1,11 +1,4 @@
-res://scenes/nothing_scene.tscn
-res://scripts/nothing_scene.gd
-res://scripts/player.gd
-res://scenes/door.tscn
-res://scripts/door.gd
-res://scenes/player.tscn
-res://scripts/game_manager.gd
-res://scripts/chave.gd
 res://scenes/level_1.tscn
+res://scenes/player.tscn
+res://scripts/player.gd
 res://scenes/enemy.tscn
-res://scenes/cutscene.tscn

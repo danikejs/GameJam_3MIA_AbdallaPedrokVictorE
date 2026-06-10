@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 const SPEED = 300.0
-const JUMP_VELOCITY = -470.0
+const JUMP_VELOCITY = -454.0
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
@@ -13,7 +13,7 @@ func _physics_process(delta: float) -> void:
 
 		# Faz cair mais rápido
 		if velocity.y > 0:
-			velocity += get_gravity() * delta * 1.0
+			velocity += get_gravity() * delta * 1.5
 
 	# Pulo
 	if Input.is_action_just_pressed("jump") and is_on_floor():

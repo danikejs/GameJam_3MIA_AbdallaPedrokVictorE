@@ -1,19 +1,16 @@
 [gd_scene format=3 uid="uid://2lf4rso3wfm7"]
 
 [ext_resource type="Script" uid="uid://odummcns0bk0" path="res://scripts/player.gd" id="1_g2els"]
-[ext_resource type="Texture2D" uid="uid://dpw7v1pjewu7m" path="res://assets/kenney_abstract-platformer/PNG/Players/Player Blue/playerBlue_walk1.png" id="2_qlg0r"]
-[ext_resource type="Texture2D" uid="uid://bmvghynxaxqi5" path="res://assets/kenney_abstract-platformer/PNG/Players/Player Blue/playerBlue_up1.png" id="2_smehm"]
-[ext_resource type="Texture2D" uid="uid://b2dj4gtvkye6d" path="res://assets/kenney_abstract-platformer/PNG/Players/Player Blue/playerBlue_walk2.png" id="3_tuyoq"]
-[ext_resource type="Texture2D" uid="uid://chn0dn6p7c7l4" path="res://assets/kenney_abstract-platformer/PNG/Players/Player Blue/playerBlue_up2.png" id="3_ur7pv"]
-[ext_resource type="Texture2D" uid="uid://ci7wlckk7amwn" path="res://assets/kenney_abstract-platformer/PNG/Players/Player Blue/playerBlue_walk3.png" id="4_fjrip"]
-[ext_resource type="Texture2D" uid="uid://dgmbagp1ko70f" path="res://assets/kenney_abstract-platformer/PNG/Players/Player Blue/playerBlue_up3.png" id="4_y4r1p"]
-[ext_resource type="Texture2D" uid="uid://co6b2ux154rg8" path="res://assets/kenney_abstract-platformer/PNG/Players/Player Blue/playerBlue_walk4.png" id="5_smehm"]
+[ext_resource type="Texture2D" uid="uid://cxsh5w2xqhg2g" path="res://assets/personagens/PNG/Player/Poses/player_idle.png" id="2_qlg0r"]
+[ext_resource type="Texture2D" uid="uid://dib7w87ky8p3x" path="res://assets/personagens/PNG/Player/Poses/player_jump.png" id="3_tuyoq"]
+[ext_resource type="Texture2D" uid="uid://plucpxpadxvk" path="res://assets/personagens/PNG/Player/Poses/player_walk1.png" id="4_fjrip"]
+[ext_resource type="Texture2D" uid="uid://py4e54g56uxv" path="res://assets/personagens/PNG/Player/Poses/player_walk2.png" id="5_smehm"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_ur7pv"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_smehm")
+"texture": ExtResource("2_qlg0r")
 }],
 "loop": true,
 "name": &"idle",
@@ -21,25 +18,13 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_smehm")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_ur7pv")
-}, {
-"duration": 1.0,
-"texture": ExtResource("4_y4r1p")
+"texture": ExtResource("3_tuyoq")
 }],
 "loop": true,
 "name": &"jump",
-"speed": 6.0
+"speed": 3.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_qlg0r")
-}, {
-"duration": 1.0,
-"texture": ExtResource("3_tuyoq")
-}, {
 "duration": 1.0,
 "texture": ExtResource("4_fjrip")
 }, {
@@ -48,25 +33,31 @@ animations = [{
 }],
 "loop": true,
 "name": &"walk",
-"speed": 11.0
+"speed": 4.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g2els"]
-size = Vector2(75, 58)
+size = Vector2(59.147068, 103.55491)
 
 [node name="Player" type="CharacterBody2D" unique_id=1423315613]
 script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1750045974]
 texture_filter = 1
-position = Vector2(1.0000019, -0.9999981)
-scale = Vector2(1.3514166, 1.1511481)
+scale = Vector2(0.75018466, 0.6998054)
 sprite_frames = SubResource("SpriteFrames_ur7pv")
 animation = &"jump"
+frame_progress = 0.849152
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1137082187]
-position = Vector2(-0.5, -5)
+position = Vector2(0.49999994, 3.4999998)
+scale = Vector2(0.8622575, 0.6469998)
 shape = SubResource("RectangleShape2D_g2els")
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=1825377059]
 position = Vector2(6, -74)
+limit_enabled = false
+limit_left = -525
+limit_top = -165
+limit_right = 525
+limit_bottom = 165
