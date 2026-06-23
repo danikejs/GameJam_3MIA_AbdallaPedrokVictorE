@@ -44,7 +44,7 @@ target_position = Vector2(14, 26)
 
 [node name="FloorLeft" type="RayCast2D" parent="." unique_id=1527476561]
 position = Vector2(0, -1)
-target_position = Vector2(-14, 24)
+target_position = Vector2(-15, 25)
 
 [node name="Killzone" parent="." unique_id=1961584173 instance=ExtResource("4_5uy6h")]
 position = Vector2(-15, -10)

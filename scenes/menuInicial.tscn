@@ -1,0 +1,63 @@
+[gd_scene format=3 uid="uid://b6y0jg40rf77r"]
+
+[ext_resource type="Texture2D" uid="uid://c8ptjjn2yno1a" path="res://assets/kenney_abstract-platformer/PNG/Backgrounds/set3_background.png" id="1_p0uqc"]
+
+[sub_resource type="FontVariation" id="FontVariation_jhs6u"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_81crh"]
+font = SubResource("FontVariation_jhs6u")
+font_size = 33
+font_color = Color(0, 0, 0, 1)
+shadow_size = 0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p0uqc"]
+bg_color = Color(0.3372549, 0.3019608, 0.5294118, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jhs6u"]
+bg_color = Color(0.2940315, 0.26150465, 0.46825802, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="MenuInicial" type="Control" unique_id=1758048684]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="GameBackgroud" type="TextureRect" parent="." unique_id=667245616]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_p0uqc")
+
+[node name="TituloJogoLabel" type="Label" parent="GameBackgroud" unique_id=142953961]
+layout_mode = 0
+offset_left = 457.0
+offset_top = 152.0
+offset_right = 684.0
+offset_bottom = 198.0
+text = "Atrás da Porta"
+label_settings = SubResource("LabelSettings_81crh")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Button" type="Button" parent="GameBackgroud" unique_id=1949935203]
+layout_mode = 0
+offset_left = 403.0
+offset_top = 245.0
+offset_right = 750.0
+offset_bottom = 311.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_p0uqc")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_jhs6u")
+text = "Jogar"

@@ -1,10 +1,10 @@
-[gd_scene format=3 uid="uid://dylp5dym2qrw6"]
+[gd_scene format=3 uid="uid://dckxjshjnlb0b"]
 
-[ext_resource type="Script" uid="uid://cgayse0af8qeq" path="res://scripts/chave.gd" id="1_rwqht"]
-[ext_resource type="Texture2D" uid="uid://7avq8pdjjgxd" path="res://assets/kenney_abstract-platformer/PNG/Items/keyRed.png" id="2_i64fm"]
+[ext_resource type="Script" uid="uid://dh4f0j0n4fwjp" path="res://scripts/powerup_invincibility.gd" id="1_4amsp"]
+[ext_resource type="Texture2D" uid="uid://bmg7k72qrf4rp" path="res://assets/power up cafe/64.png" id="2_murk2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i64fm"]
-size = Vector2(29, 33)
+size = Vector2(36, 33)
 
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_rwqht"]
 particle_flag_disable_z = true
@@ -17,13 +17,15 @@ scale_max = 4.0
 color = Color(1, 0.84313726, 0, 1)
 
 [node name="chave" type="Area2D" unique_id=1459879728]
-script = ExtResource("1_rwqht")
+script = ExtResource("1_4amsp")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1965858495]
-texture = ExtResource("2_i64fm")
+position = Vector2(0.4660437, 0.49999928)
+scale = Vector2(1.0031935, 1.1071429)
+texture = ExtResource("2_murk2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=488218288]
-position = Vector2(0.5, -0.5)
+position = Vector2(1, 0.5)
 shape = SubResource("RectangleShape2D_i64fm")
 
 [node name="Particles" type="GPUParticles2D" parent="." unique_id=858542862]
