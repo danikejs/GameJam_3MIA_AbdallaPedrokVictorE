@@ -12,7 +12,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("2_qlg0r")
 }],
-"loop": true,
+"loop": 1,
 "name": &"idle",
 "speed": 5.0
 }, {
@@ -20,7 +20,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("3_tuyoq")
 }],
-"loop": true,
+"loop": 1,
 "name": &"jump",
 "speed": 3.0
 }, {
@@ -31,7 +31,7 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("5_smehm")
 }],
-"loop": true,
+"loop": 1,
 "name": &"walk",
 "speed": 4.0
 }]
@@ -40,6 +40,8 @@ animations = [{
 size = Vector2(59.147068, 103.55491)
 
 [node name="Player" type="CharacterBody2D" unique_id=1423315613]
+floor_max_angle = 1.0716321
+floor_snap_length = 9.2
 script = ExtResource("1_g2els")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1750045974]
