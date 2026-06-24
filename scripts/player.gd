@@ -1,5 +1,7 @@
 extends CharacterBody2D
 
+signal vida_alterada(vida_atual: int)
+
 const SPEED = 300.0
 const JUMP_VELOCITY = -454.0
 
@@ -67,17 +69,17 @@ func die():
 
 	tomar_dano(1)
 
-func tomar_dano(dano: int) -> void:
+
+# ...outras funções
+func tomar_dano(dano:int) -> void:
 	GameManager.vidas -= dano
-
-	if hud != null:
-		hud.atualizar_vidas()
-
 	if GameManager.vidas <= 0:
-		print("Game Over")
-		get_tree().reload_current_scene()
+		get_tree().change_scene_to_file("res://scenes/game_over.tscn")
 	else:
 		respawn()
+		# sinal emitido enviando o número de vidas atualizado
+		vida_alterada.emit(GameManager.vidas)
+
 
 # RESPAWN
 func respawn() -> void:

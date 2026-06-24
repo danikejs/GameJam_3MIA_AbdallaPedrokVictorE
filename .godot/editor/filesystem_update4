@@ -1,12 +1,5 @@
+res://scenes/pause_menu.tscn
+res://scripts/pause_menu.gd
 res://scenes/level_1.tscn
-res://scripts/player.gd
-res://scripts/powerup_speed.gd
-res://scenes/enemy.tscn
-res://scenes/powerup_speed.tscn
-res://scenes/powerup_invincibility.tscn
-res://scripts/enemy.gd
-res://scenes/hud.tscn
-res://scripts/game_manager.gd
-res://scenes/hud.gd
-res://scripts/hud.gd
 res://scenes/menuInicial.tscn
+res://scenes/game_over.tscn

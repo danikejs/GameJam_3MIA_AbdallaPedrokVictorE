@@ -1,0 +1,58 @@
+[gd_scene format=3 uid="uid://bbvos3raxlkl3"]
+
+[ext_resource type="Script" uid="uid://ccmtu4rju6ola" path="res://scripts/game_over.gd" id="1_xeevv"]
+[ext_resource type="Texture2D" uid="uid://y4bw7c66vb0l" path="res://assets/gameOver.png" id="2_wqhvx"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wqhvx"]
+bg_color = Color(0.3372549, 0.3019608, 0.5294118, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_tbwuq"]
+bg_color = Color(0.2940315, 0.26150465, 0.46825802, 1)
+corner_radius_top_left = 20
+corner_radius_top_right = 20
+corner_radius_bottom_right = 20
+corner_radius_bottom_left = 20
+
+[node name="GameOver" type="Control" unique_id=1944588232]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xeevv")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=1131205939]
+
+[node name="ColorRect" type="TextureRect" parent="CanvasLayer" unique_id=520825130]
+anchors_preset = -1
+anchor_left = -0.14583333
+anchor_top = -0.12654321
+anchor_right = 0.106770836
+anchor_bottom = 0.0061728396
+offset_left = -15.0
+offset_top = 6.0
+offset_right = 1198.0
+offset_bottom = 676.0
+texture = ExtResource("2_wqhvx")
+expand_mode = 1
+stretch_mode = 5
+metadata/_edit_use_anchors_ = true
+
+[node name="TentarNovamenteButton" type="Button" parent="CanvasLayer/ColorRect" unique_id=1460540219]
+layout_mode = 0
+offset_left = 578.0
+offset_top = 573.0
+offset_right = 903.0
+offset_bottom = 657.0
+theme_override_font_sizes/font_size = 28
+theme_override_styles/normal = SubResource("StyleBoxFlat_wqhvx")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_tbwuq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_tbwuq")
+text = "Jogar de novo"
+
+[connection signal="pressed" from="CanvasLayer/ColorRect/TentarNovamenteButton" to="." method="_on_tentar_novamente_button_pressed"]

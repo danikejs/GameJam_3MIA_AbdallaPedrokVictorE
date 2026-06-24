@@ -1,28 +1,21 @@
 [gd_scene format=3 uid="uid://b6y0jg40rf77r"]
 
-[ext_resource type="Texture2D" uid="uid://c8ptjjn2yno1a" path="res://assets/kenney_abstract-platformer/PNG/Backgrounds/set3_background.png" id="1_p0uqc"]
-
-[sub_resource type="FontVariation" id="FontVariation_jhs6u"]
-
-[sub_resource type="LabelSettings" id="LabelSettings_81crh"]
-font = SubResource("FontVariation_jhs6u")
-font_size = 33
-font_color = Color(0, 0, 0, 1)
-shadow_size = 0
+[ext_resource type="Script" uid="uid://3a3h54x4i4hg" path="res://scripts/menu_inicial.gd" id="1_81crh"]
+[ext_resource type="Texture2D" uid="uid://lrfv05asf66y" path="res://assets/inicial.png" id="2_jhs6u"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_p0uqc"]
 bg_color = Color(0.3372549, 0.3019608, 0.5294118, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
+corner_radius_top_left = 33
+corner_radius_top_right = 33
+corner_radius_bottom_right = 33
+corner_radius_bottom_left = 33
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_jhs6u"]
 bg_color = Color(0.2940315, 0.26150465, 0.46825802, 1)
-corner_radius_top_left = 20
-corner_radius_top_right = 20
-corner_radius_bottom_right = 20
-corner_radius_bottom_left = 20
+corner_radius_top_left = 33
+corner_radius_top_right = 33
+corner_radius_bottom_right = 33
+corner_radius_bottom_left = 33
 
 [node name="MenuInicial" type="Control" unique_id=1758048684]
 layout_mode = 3
@@ -31,33 +24,34 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_81crh")
 
 [node name="GameBackgroud" type="TextureRect" parent="." unique_id=667245616]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
+offset_left = 0.4390869
+offset_top = -25.0
+offset_right = 18.073242
+offset_bottom = 22.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = ExtResource("1_p0uqc")
+texture = ExtResource("2_jhs6u")
+expand_mode = 1
+stretch_mode = 5
 
-[node name="TituloJogoLabel" type="Label" parent="GameBackgroud" unique_id=142953961]
+[node name="JogarButton" type="Button" parent="GameBackgroud" unique_id=1949935203]
 layout_mode = 0
-offset_left = 457.0
-offset_top = 152.0
-offset_right = 684.0
-offset_bottom = 198.0
-text = "Atrás da Porta"
-label_settings = SubResource("LabelSettings_81crh")
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Button" type="Button" parent="GameBackgroud" unique_id=1949935203]
-layout_mode = 0
-offset_left = 403.0
-offset_top = 245.0
-offset_right = 750.0
-offset_bottom = 311.0
+offset_left = 423.5609
+offset_top = 576.0
+offset_right = 733.5609
+offset_bottom = 647.0
+theme_override_constants/h_separation = 4
+theme_override_font_sizes/font_size = 28
 theme_override_styles/normal = SubResource("StyleBoxFlat_p0uqc")
 theme_override_styles/pressed = SubResource("StyleBoxFlat_jhs6u")
+theme_override_styles/hover = SubResource("StyleBoxFlat_jhs6u")
 text = "Jogar"
+
+[connection signal="pressed" from="GameBackgroud/JogarButton" to="." method="_on_jogar_button_pressed"]

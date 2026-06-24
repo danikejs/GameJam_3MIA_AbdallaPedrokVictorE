@@ -1,6 +1,6 @@
+TextureRect
 Button
 Label
-TextureRect
 Control
 Marker2D
 CanvasLayer
@@ -12,4 +12,3 @@ ColorRect
 Camera2D
 GPUParticles2D
 RayCast2D
-AnimatedSprite2D
