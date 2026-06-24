@@ -54,3 +54,6 @@ func show_messages():
 
 	label.text = "Não existe nada atrás da porta."
 	await get_tree().create_timer(4.0).timeout
+
+	# Volta para o menu inicial
+	get_tree().change_scene_to_file("res://scenes/menuInicial.tscn")

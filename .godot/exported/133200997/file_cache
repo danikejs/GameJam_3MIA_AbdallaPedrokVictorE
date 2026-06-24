@@ -1,0 +1,12 @@
+res://scenes/chave.tscn::8188d031dac60fb5410989ea5de55dbc::1782322210::res://.godot/exported/133200997/export-b6eb13c715d6ed0d4bd7d1debd1d430d-chave.scn
+res://scenes/cutscene.tscn::2241ce7b181102778e206900dd088d66::1782324537::res://.godot/exported/133200997/export-8fb50c155b3d8e8bc22dadc931832e8e-cutscene.scn
+res://scenes/door.tscn::71c197c23ae76519a57a7a0f847d7858::1782322210::res://.godot/exported/133200997/export-3370694a3d56567dea5c3bf0058a536d-door.scn
+res://scenes/enemy.tscn::cd68ba0f5695339cde28d99576265f4c::1782322210::res://.godot/exported/133200997/export-a930820ec0ab16db6719aff4daa500f9-enemy.scn
+res://scenes/game_over.tscn::887ae5dc4f3d55b238e4dfe7304b245c::1782322210::res://.godot/exported/133200997/export-21b8bee24a2bf9e9929bc898cc82b612-game_over.scn
+res://scenes/hud.tscn::bc29faf72386b5eeadcdf322953821e9::1782322666::res://.godot/exported/133200997/export-38bf74ff262409a94a41206b2b776d33-hud.scn
+res://scenes/killzone.tscn::24eae80c56ed8af3ecd5eb134ddaa43f::1782322210::res://.godot/exported/133200997/export-494bf1445653c44a49a39c8f8b1ce8d0-killzone.scn
+res://scenes/level_1.tscn::b44002df3caa9d3efbc90be38a10abaf::1782322210::res://.godot/exported/133200997/export-6887eba858c6ae48b5ca13a7525fa2f9-level_1.scn
+res://scenes/menuInicial.tscn::f764bb2019b54fcc8dc12f98bafb01f8::1782322638::res://.godot/exported/133200997/export-547072ecb9970911057dc68129a0ce76-menuInicial.scn
+res://scenes/pause_menu.tscn::3489703100e2340f0f690909e076b679::1782324195::res://.godot/exported/133200997/export-ca2c2284eb591e72162d67219a0d2f87-pause_menu.scn
+res://scenes/player.tscn::53ffc5ff315a369ccd26cb6ab74dc890::1782322210::res://.godot/exported/133200997/export-234fb6894ec6226e856ab7f825500d3d-player.scn
+res://scenes/powerup_invincibility.tscn::c80b3cbafb34f8fcd112ac7f7ab98da5::1782322210::res://.godot/exported/133200997/export-8cb3e326d79a3fa95b89f7be0e236b68-powerup_invincibility.scn

@@ -37,7 +37,7 @@ func _process(delta: float) -> void:
 		invencivel_timer -= delta
 
 		if invencivel_timer > 0:
-			invencivel_label.text = "INVENCÍVEL: " + str(ceil(invencivel_timer)) + "s"
+			invencivel_label.text = "INVENCIVEL"
 		else:
 			invencivel_active = false
 			invencivel_label.visible = false
